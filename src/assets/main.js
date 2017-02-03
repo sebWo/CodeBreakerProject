@@ -46,7 +46,6 @@ function validateInput (input) {
 }
 
 function getResults(input) {
-  var numbersCorrect = 0;
   var html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
   for ( i = 0 ; i < input.length; i++) {
     if (input.charAt(i) == answer.value.charAt(i)) {
@@ -60,7 +59,12 @@ function getResults(input) {
   }
   html += '</div></div>';
   document.getElementById('results').innerHTML += html;
-  if(numbersCorrect == 4) {
+  if(input == answer.value) {
     return true;
   }
+  return false;
+}
+
+function showAnswer() {
+
 }
