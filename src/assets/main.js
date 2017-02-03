@@ -74,3 +74,8 @@ function showAnswer(success) {
   }
   code.innerHTML = answer.value;
 }
+
+function showReplay() {
+  document.getElementById('guessing-div').style.display = "none";
+  document.getElementById('replay-div').style.display = "block";
+}
